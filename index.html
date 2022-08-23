@@ -14,6 +14,7 @@
             <div class="text-5xl text-orange-600 font-bold flex justify-center"><h1 class="px-auto">Choose Five to Fight</h1></div>
             <div class="text-white pt-4 flex justify-center"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates doloribus asperiores quas vitae mollitia! Nulla rem pariatur dolorum eligendi possimus.</p></div> 
         </div>
+
     </header>
     <main>
         <section>
@@ -37,7 +38,7 @@
                       </div>
                       <!-- player-2 -->
                       <div class="max-w-sm rounded bg-black shadow-lg h-fit">
-                        <img class="w-full h-85" src="images/Lionel Messi.jpg">
+                        <img class="w-full h-85" src="images/Lionel Messi.png">
                         <div class="px-6 py-4">
                           <h1 class="font-bold text-xl mb-2 text-white">Lionel Messi</h1>
                           <p class="text-white">
@@ -52,7 +53,7 @@
                       </div>
                       <!-- player-3 -->
                       <div class="max-w-sm rounded bg-black shadow-lg h-fit">
-                        <img class="w-full h-85" src="images/Neymar.jpg">
+                        <img class="w-full h-85" src="images/Neymar.png">
                         <div class="px-6 py-4">
                           <h1 class="font-bold text-xl mb-2 text-white">Neymar</h1>
                           <p class="text-white">
@@ -67,7 +68,7 @@
                       </div>
                       <!-- player-4 -->
                       <div class="max-w-sm rounded bg-black shadow-lg h-fit">
-                        <img class="w-full h-85" src="images/Luka Modric.jpg">
+                        <img class="w-full h-85" src="images/Luka Modric.png">
                         <div class="px-6 py-4">
                           <h1 class="font-bold text-xl mb-2 text-white">Luka Modric</h1>
                           <p class="text-white">
@@ -82,7 +83,7 @@
                       </div>
                       <!-- player-5 -->
                       <div class="max-w-sm rounded bg-black shadow-lg h-fit">
-                        <img class="w-full h-85" src="images/Karim Benzema.jpg">
+                        <img class="w-full h-85" src="images/Karim Benzema.png">
                         <div class="px-6 py-4">
                           <h1 class="font-bold text-xl mb-2 text-white">Karim Benzema</h1>
                           <p class="text-white">
@@ -97,7 +98,7 @@
                       </div>
                       <!-- player-6 -->
                       <div class="max-w-sm rounded bg-black shadow-lg h-fit">
-                        <img class="w-full h-85" src="images/Mohamed Shah.jpg">
+                        <img class="w-full h-85" src="images/Mohamed Shah.png">
                         <div class="px-6 py-4">
                           <h1 class="font-bold text-xl mb-2 text-white">Mohamed Shah</h1>
                           <p class="text-white">
@@ -116,7 +117,7 @@
                     <!-- selected v -->
                     <div class="max-w-sm rounded bg-black shadow-lg h-fit text-white">
                         <div class="px-6 py-4">
-                          <div class="font-bold text-xl mb-2 text-orange-600">Selected V</div>
+                          <div class="font-bold text-xl mb-2 text-orange-600">Selected <span id="selected-number">V</span></div>
                         </div>
                        <div class="flex justify-center py-10">
                         <table id="list" class="text-white">
@@ -142,16 +143,18 @@
                 
                        <!-- player expense -->
                        <div>
-                        <p>Player Expenses   $<span id="totalPlayerExpense"> 00</span></p>
+                        <div class="py-2 flex justify-between">
+                          <p>Player Expenses ($)<div class="text-xl font-bold text-orange-700" id="total">00</div></p>
+                        </div>
                         <!-- manager part -->
-                        <div class="py-2">
-                            <span>Manager</span>
-                            <input id="manager-amount" type="text" placeholder="manager amount">
+                        <div class="py-2 flex justify-between">
+                            <span>Manager:</span>
+                            <input id="manager-amount" class="bg-black border-2 border-gray-100" type="text" placeholder="manager amount">
                         </div>
                         <!-- coach part -->
-                        <div>
-                            <span>Coach</span>
-                        <input id="coach-amount" type="text" placeholder="coach amount">
+                        <div class="flex justify-between">
+                            <span>Coach:</span>
+                        <input class="bg-black border-2 border-gray-100" id="coach-amount" type="text" placeholder="coach amount">
                         </div>
                        </div>
                        <!-- button div.. -->
@@ -160,7 +163,9 @@
                             Calculate Total
                           </button>
                        </div>
-                       <span>Total    $</span><span id="total" class="text-orange-700">10</span>
+                       <div class="py-2 flex justify-between">
+                        <p>Total ($)<div class="text-xl font-bold text-orange-700" id="totalPlayerExpense">00</div></p>
+                      </div>
                       </div>
                   </div>
             </div>

@@ -12,9 +12,11 @@ function displayPlayers(playerslist){
         tr.innerHTML=
         `
          <td>${i+1}</td>
-         <td>${name}</td>
+         <td><span> &#160;&#160;&#160; </span>${name}</td>
          `
         listItems.appendChild(tr);
+        const selectedNumber = document.getElementById('selected-number');
+        selectedNumber.innerText = i+1;
     }
 }
 
@@ -32,9 +34,21 @@ if(playerArray.length<6){
 }
 else{
     btn.disabled = true;
-    alert("You have already selected 5!")
+    alert("You have already selected 5!");
 }
     
+}
+// common function for getting text value
+function getValue(idName){
+    const field = document.getElementById(idName);
+    const value = parseFloat(field.value);
+    return value;
+}
+// common function for getting inner text value 
+function getInnerTextValue(element){
+    const innertextfield = document.getElementById(element);
+    const innerTextValue = parseFloat(innertextfield.innerText);
+    return innerTextValue;
 }
 
 
@@ -44,30 +58,21 @@ document.getElementById('btn-calculate').addEventListener('click',function(){
     const costPerPlayerField = document.getElementById('costPerPlayer');
     const costPerPlayer = costPerPlayerField.value; 
     var playerExpense = costPerPlayer*playerArray.length;
-    const totalPlayerExpenseField = document.getElementById('totalPlayerExpense');
+    const totalPlayerExpenseField = document.getElementById('total');
     totalPlayerExpenseField.innerText = playerExpense;
-    return playerExpense;
 })
+
+
+
 // For Calculate Total button 
-
 document.getElementById('btn-calculate-total').addEventListener('click',function(){
-    const managerAmountField = document.getElementById('manager-amount');
-    const managerAmount = parseFloat(managerAmountField.value);
-    console.log(managerAmount);
-
-    const coachAmountField = document.getElementById('coach-amount');
-    const coachAmount = parseFloat(coachAmountField.value);
-    console.log(coachAmount);
+    const managerAmount = getValue('manager-amount');
+    const coachAmount = getValue('coach-amount');
     const managerAndCoach = managerAmount+coachAmount;
-    console.log(managerAndCoach);
 
-    const totalField = document.getElementById('total');
-    const totalAmount = parseFloat(totalField.innerText);
-console.log(totalAmount);
+    const totalAmount = getInnerTextValue('total')
+    const totalFinal = totalAmount+ managerAndCoach;
 
 const totalPlayerExpenseField = document.getElementById('totalPlayerExpense');
-    const totalPlayerExpenseValue = parseFloat(totalPlayerExpenseField.innerText);
-
-const totalFinal = totalAmount + totalPlayerExpenseValue + managerAndCoach;
-console.log(totalFinal);
+totalPlayerExpenseField.innerText = totalFinal;
 })
