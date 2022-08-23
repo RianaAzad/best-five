@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- tailwind link -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- CSS link -->
    <link rel="stylesheet" href="style.css">
     <title>Assignment 5</title>
 </head>
@@ -20,9 +22,9 @@
         <section>
             <div class="flex bg-zinc-900">
                 <!-- Player list -->
-                <div class="w-3/4 grid grid-cols-3 gap-5 container m-auto pt-16 pb-16 pl-16 pr-5">
+                <div class="w-3/4 grid grid-cols-3 gap-5 container m-auto p-8">
                     <!-- Player-1  -->
-                    <div class="max-w-sm rounded bg-black shadow-lg h-fit">
+                    <div class="max-w-sm rounded bg-black shadow-lg h-fit border-2 border-gray-600">
                         <img class="w-full h-70" src="images/Christiano Ronaldo.jpg">
                         <div class="px-6 py-4">
                           <h1 class="font-bold text-xl mb-2 text-white">Christiano Ronaldo</h1>
@@ -37,7 +39,7 @@
                        </div>
                       </div>
                       <!-- player-2 -->
-                      <div class="max-w-sm rounded bg-black shadow-lg h-fit">
+                      <div class="max-w-sm rounded bg-black shadow-lg h-fit border-2 border-gray-600">
                         <img class="w-full h-85" src="images/Lionel Messi.png">
                         <div class="px-6 py-4">
                           <h1 class="font-bold text-xl mb-2 text-white">Lionel Messi</h1>
@@ -52,7 +54,7 @@
                        </div>
                       </div>
                       <!-- player-3 -->
-                      <div class="max-w-sm rounded bg-black shadow-lg h-fit">
+                      <div class="max-w-sm rounded bg-black shadow-lg h-fit border-2 border-gray-600">
                         <img class="w-full h-85" src="images/Neymar.png">
                         <div class="px-6 py-4">
                           <h1 class="font-bold text-xl mb-2 text-white">Neymar</h1>
@@ -67,7 +69,7 @@
                        </div>
                       </div>
                       <!-- player-4 -->
-                      <div class="max-w-sm rounded bg-black shadow-lg h-fit">
+                      <div class="max-w-sm rounded bg-black shadow-lg h-fit border-2 border-gray-600">
                         <img class="w-full h-85" src="images/Luka Modric.png">
                         <div class="px-6 py-4">
                           <h1 class="font-bold text-xl mb-2 text-white">Luka Modric</h1>
@@ -82,7 +84,7 @@
                        </div>
                       </div>
                       <!-- player-5 -->
-                      <div class="max-w-sm rounded bg-black shadow-lg h-fit">
+                      <div class="max-w-sm rounded bg-black shadow-lg h-fit border-2 border-gray-600">
                         <img class="w-full h-85" src="images/Karim Benzema.png">
                         <div class="px-6 py-4">
                           <h1 class="font-bold text-xl mb-2 text-white">Karim Benzema</h1>
@@ -91,13 +93,13 @@
                           </p>
                         </div>
                        <div class="flex justify-center py-10">
-                        <button onclick="addPlayer(this)" class="bg-blue-500 text-white font-bold py-2 px-4 w-3/5">
+                        <button onclick="addPlayer(this)" class="bg-blue-500 text-white font-bold py-2 px-4 w-3/5 btn">
                             Select
                           </button>
                        </div>
                       </div>
                       <!-- player-6 -->
-                      <div class="max-w-sm rounded bg-black shadow-lg h-fit">
+                      <div class="max-w-sm rounded bg-black shadow-lg h-fit border-2 border-gray-600">
                         <img class="w-full h-85" src="images/Mohamed Shah.png">
                         <div class="px-6 py-4">
                           <h1 class="font-bold text-xl mb-2 text-white">Mohamed Shah</h1>
@@ -106,7 +108,7 @@
                           </p>
                         </div>
                        <div class="flex justify-center py-10">
-                        <button onclick="addPlayer(this)" class="bg-blue-500 text-white font-bold py-2 px-4 w-3/5">
+                        <button onclick="addPlayer(this)" class="bg-blue-500 text-white font-bold py-2 px-4 w-3/5 btn">
                             Select
                           </button>
                        </div>
@@ -115,9 +117,9 @@
                   <!-- calculation list -->
                   <div class="w-1/4 grid grid-cols-1 container pt-16 pr-16">
                     <!-- selected v -->
-                    <div class="max-w-sm rounded bg-black shadow-lg h-fit text-white">
+                    <div class="max-w-sm rounded bg-black shadow-lg h-3/4 text-white mb-2">
                         <div class="px-6 py-4">
-                          <div class="font-bold text-xl mb-2 text-orange-600">Selected <span id="selected-number">V</span></div>
+                          <div class="font-bold text-xl mb-2 text-orange-600">Selected <span id="selected-number">0</span></div>
                         </div>
                        <div class="flex justify-center py-10">
                         <table id="list" class="text-white">
@@ -132,7 +134,7 @@
                         </div>
                         <div class="flex justify-between">
                             <span>Per Player:</span>
-                        <input id="costPerPlayer" class="bg-black border-2 border-gray-100" type="text" class="" placeholder="Amount per Player">
+                        <input id="costPerPlayer" class="bg-black border-2 border-gray-100 w-full" type="text" class="" placeholder="Amount per Player">
                            </div>
                            <!-- button div.. -->
                            <div class="flex justify-center py-10">
@@ -149,12 +151,12 @@
                         <!-- manager part -->
                         <div class="py-2 flex justify-between">
                             <span>Manager:</span>
-                            <input id="manager-amount" class="bg-black border-2 border-gray-100" type="text" placeholder="manager amount">
+                            <input id="manager-amount" class="bg-black border-2 border-gray-100 w-full" type="text" placeholder="Manager amount">
                         </div>
                         <!-- coach part -->
                         <div class="flex justify-between">
                             <span>Coach:</span>
-                        <input class="bg-black border-2 border-gray-100" id="coach-amount" type="text" placeholder="coach amount">
+                        <input class="bg-black border-2 border-gray-100 w-full" id="coach-amount" type="text" placeholder="Coach amount">
                         </div>
                        </div>
                        <!-- button div.. -->

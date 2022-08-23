@@ -33,8 +33,9 @@ if(playerArray.length<6){
     displayPlayers(playerArray);
 }
 else{
-    alert("You have already selected 5!");
+
     btn.disabled = true;
+    alert("You have already selected 5!");
     return playerArray.length = 5;
 }
     
@@ -43,7 +44,12 @@ else{
 function getValue(idName){
     const field = document.getElementById(idName);
     const value = parseFloat(field.value);
-    return value;
+    if(value>0){
+        return value;
+    }
+    else{
+        alert('Please Enter valid data');
+    }
 }
 // common function for getting inner text value 
 function getInnerTextValue(element){
@@ -58,9 +64,14 @@ function getInnerTextValue(element){
 document.getElementById('btn-calculate').addEventListener('click',function(){
     const costPerPlayerField = document.getElementById('costPerPlayer');
     const costPerPlayer = costPerPlayerField.value; 
+if(costPerPlayer>0){
     var playerExpense = costPerPlayer*playerArray.length;
     const totalPlayerExpenseField = document.getElementById('total');
     totalPlayerExpenseField.innerText = playerExpense;
+}
+else{
+    alert('Please Enter valid data');
+}   
 })
 
 
@@ -73,7 +84,14 @@ document.getElementById('btn-calculate-total').addEventListener('click',function
 
     const totalAmount = getInnerTextValue('total')
     const totalFinal = totalAmount+ managerAndCoach;
+    let finalResult = isNaN(totalFinal);
+    if(finalResult== true){
+        const totalPlayerExpenseField = document.getElementById('totalPlayerExpense');
+    totalPlayerExpenseField.innerText = 0;
+    }
+else{
+    const totalPlayerExpenseField = document.getElementById('totalPlayerExpense');
+    totalPlayerExpenseField.innerText = totalFinal;
+}
 
-const totalPlayerExpenseField = document.getElementById('totalPlayerExpense');
-totalPlayerExpenseField.innerText = totalFinal;
 })
