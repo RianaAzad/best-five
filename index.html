@@ -17,20 +17,20 @@
     </header>
     <main>
         <section>
-            <div class="flex">
+            <div class="flex bg-zinc-900">
                 <!-- Player list -->
-                <div class="w-3/4 bg-gray-800 grid grid-cols-3 gap-5 container m-auto pt-16 pb-16 pl-16 pr-5">
+                <div class="w-3/4 grid grid-cols-3 gap-5 container m-auto pt-16 pb-16 pl-16 pr-5">
                     <!-- Player-1  -->
                     <div class="max-w-sm rounded bg-black shadow-lg h-fit">
                         <img class="w-full h-70" src="images/Christiano Ronaldo.jpg">
                         <div class="px-6 py-4">
-                          <div class="font-bold text-xl mb-2 text-white">Christiano Ronaldo</div>
+                          <h1 class="font-bold text-xl mb-2 text-white">Christiano Ronaldo</h1>
                           <p class="text-white">
                             36 Goals - 120 assist
                           </p>
                         </div>
                        <div class="flex justify-center py-10">
-                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 w-3/5">
+                        <button id="btn-select" onclick="addPlayer(this)" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 w-3/5">
                             Select
                           </button>
                        </div>
@@ -39,13 +39,13 @@
                       <div class="max-w-sm rounded bg-black shadow-lg h-fit">
                         <img class="w-full h-85" src="images/Lionel Messi.jpg">
                         <div class="px-6 py-4">
-                          <div class="font-bold text-xl mb-2 text-white">Lionel Messi</div>
+                          <h1 class="font-bold text-xl mb-2 text-white">Lionel Messi</h1>
                           <p class="text-white">
                             36 Goals - 120 assist
                           </p>
                         </div>
                        <div class="flex justify-center py-10">
-                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 w-3/5">
+                        <button onclick="addPlayer(this)" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 w-3/5">
                             Select
                           </button>
                        </div>
@@ -54,13 +54,13 @@
                       <div class="max-w-sm rounded bg-black shadow-lg h-fit">
                         <img class="w-full h-85" src="images/Neymar.jpg">
                         <div class="px-6 py-4">
-                          <div class="font-bold text-xl mb-2 text-white">Neymar</div>
+                          <h1 class="font-bold text-xl mb-2 text-white">Neymar</h1>
                           <p class="text-white">
                             36 Goals - 120 assist
                           </p>
                         </div>
                        <div class="flex justify-center py-10">
-                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 w-3/5">
+                        <button onclick="addPlayer(this)" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 w-3/5">
                             Select
                           </button>
                        </div>
@@ -69,13 +69,13 @@
                       <div class="max-w-sm rounded bg-black shadow-lg h-fit">
                         <img class="w-full h-85" src="images/Luka Modric.jpg">
                         <div class="px-6 py-4">
-                          <div class="font-bold text-xl mb-2 text-white">Luka Modric</div>
+                          <h1 class="font-bold text-xl mb-2 text-white">Luka Modric</h1>
                           <p class="text-white">
                             36 Goals - 120 assist
                           </p>
                         </div>
                        <div class="flex justify-center py-10">
-                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 w-3/5">
+                        <button onclick="addPlayer(this)" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 w-3/5">
                             Select
                           </button>
                        </div>
@@ -84,13 +84,13 @@
                       <div class="max-w-sm rounded bg-black shadow-lg h-fit">
                         <img class="w-full h-85" src="images/Karim Benzema.jpg">
                         <div class="px-6 py-4">
-                          <div class="font-bold text-xl mb-2 text-white">Karim Benzema</div>
+                          <h1 class="font-bold text-xl mb-2 text-white">Karim Benzema</h1>
                           <p class="text-white">
                             36 Goals - 120 assist
                           </p>
                         </div>
                        <div class="flex justify-center py-10">
-                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 w-3/5">
+                        <button onclick="addPlayer(this)" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 w-3/5">
                             Select
                           </button>
                        </div>
@@ -99,51 +99,77 @@
                       <div class="max-w-sm rounded bg-black shadow-lg h-fit">
                         <img class="w-full h-85" src="images/Mohamed Shah.jpg">
                         <div class="px-6 py-4">
-                          <div class="font-bold text-xl mb-2 text-white">Mohamed Shah</div>
+                          <h1 class="font-bold text-xl mb-2 text-white">Mohamed Shah</h1>
                           <p class="text-white">
                             36 Goals - 120 assist
                           </p>
                         </div>
                        <div class="flex justify-center py-10">
-                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 w-3/5">
+                        <button onclick="addPlayer(this)" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 w-3/5">
                             Select
                           </button>
                        </div>
                       </div>
                   </div>
                   <!-- calculation list -->
-                  <div class="w-1/4 bg-gray-800 grid grid-cols-1 container pt-16 pr-16">
+                  <div class="w-1/4 grid grid-cols-1 container pt-16 pr-16">
                     <!-- selected v -->
-                    <div class="max-w-sm rounded bg-black shadow-lg h-fit">
+                    <div class="max-w-sm rounded bg-black shadow-lg h-fit text-white">
                         <div class="px-6 py-4">
-                          <div class="font-bold text-xl mb-2 text-white">Selected V</div>
-                          <p class="text-white">
-                            36 Goals - 120 assist
-                          </p>
+                          <div class="font-bold text-xl mb-2 text-orange-600">Selected V</div>
                         </div>
                        <div class="flex justify-center py-10">
-                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 w-3/5">
-                            Select
-                          </button>
+                        <table id="list" class="text-white">
+                            
+                        </table>
                        </div>
                       </div>
                       <!-- calculation -->
-                      <div class="max-w-sm rounded bg-black shadow-lg h-fit">
+                      <div class="max-w-sm rounded bg-black shadow-lg h-fit text-white p-4">
                         <div class="px-6 py-4">
-                          <div class="font-bold text-xl mb-2 text-white">Christiano Ronaldo</div>
-                          <p class="text-white">
-                            36 Goals - 120 assist
-                          </p>
+                          <div class="font-bold text-xl mb-2 text-white">Budget</div>
                         </div>
+                        <div class="flex justify-between">
+                            <span>Per Player:</span>
+                        <input id="costPerPlayer" class="bg-black border-2 border-gray-100" type="text" class="" placeholder="Amount per Player">
+                           </div>
+                           <!-- button div.. -->
+                           <div class="flex justify-center py-10">
+                            <button id="btn-calculate" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 w-3/5">
+                                Calculate
+                              </button>
+                           </div>
+                
+                       <!-- player expense -->
+                       <div>
+                        <p>Player Expenses   $<span id="totalPlayerExpense"> 00</span></p>
+                        <!-- manager part -->
+                        <div class="py-2">
+                            <span>Manager</span>
+                            <input id="manager-amount" type="text" placeholder="manager amount">
+                        </div>
+                        <!-- coach part -->
+                        <div>
+                            <span>Coach</span>
+                        <input id="coach-amount" type="text" placeholder="coach amount">
+                        </div>
+                       </div>
+                       <!-- button div.. -->
                        <div class="flex justify-center py-10">
-                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 w-3/5">
-                            Select
+                        <button id="btn-calculate-total" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 w-3/5">
+                            Calculate Total
                           </button>
                        </div>
+                       <span>Total    $</span><span id="total" class="text-orange-700">10</span>
                       </div>
                   </div>
             </div>
         </section>
+        <footer class="bg-zinc-900 py-20">
+            <hr class=" text-white">
+            <p class="text-white">copyright</p>
+        </footer>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
