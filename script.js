@@ -20,8 +20,10 @@ function displayPlayers(playerslist){
     }
 }
 
+
 function addPlayer(players){
     const btn = players.parentNode.children[0];
+    console.log(btn);
     btn.disabled= true;
 const playerName = players.parentNode.parentNode.children[1].children[0].innerText;
 
@@ -29,12 +31,11 @@ playerArray.push(playerName);
 
 if(playerArray.length<6){
     displayPlayers(playerArray);
-    const btn = document.getElementById('btn-select');
-    
 }
 else{
-    btn.disabled = true;
     alert("You have already selected 5!");
+    btn.disabled = true;
+    return playerArray.length = 5;
 }
     
 }
