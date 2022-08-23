@@ -51,7 +51,7 @@ function getValue(idName){
         alert('Please Enter valid data');
     }
 }
-// common function for getting inner text value 
+// common function for getting inner input field value 
 function getInnerTextValue(element){
     const innertextfield = document.getElementById(element);
     const innerTextValue = parseFloat(innertextfield.innerText);
@@ -71,6 +71,9 @@ if(costPerPlayer>0){
 }
 else{
     alert('Please Enter valid data');
+    var playerExpense = costPerPlayer*playerArray.length;
+    const totalPlayerExpenseField = document.getElementById('total');
+    totalPlayerExpenseField.innerText = 0;
 }   
 })
 
